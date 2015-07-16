@@ -26,7 +26,7 @@ $ npm start
 var h = require('virtual-dom/h')
 var main = require('main-loop')
 var loop = main({ n: 0 }, render, require('virtual-dom'))
-document.body.appendChild(loop.target)
+document.querySelector('#content').appendChild(loop.target)
 
 function render (state) {
   return h('div', [
